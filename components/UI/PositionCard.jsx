@@ -1,12 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import Button from './UI/Button'
-import CardBtn from './UI/CardBtn'
+import Button from './Button'
 
-export default function Card({downBtn,cardStyles, styles, post }) {
+export default function PositionCard({ cardStyles, styles, post }) {
     return (
         <>
-            <div  className={`${cardStyles} flex flex-col relative font-DINWebPro`}>
+            <div className={`${cardStyles} flex flex-col relative font-DINWebPro`}>
                 {/* Title */}
                 <div>
                     <Image src={post.imgUrl} alt="image" className='w-full h-full object-cover object-center aspect-video' width={500} height={500}
@@ -19,9 +18,8 @@ export default function Card({downBtn,cardStyles, styles, post }) {
                 </div>
                 {/* Footer */}
                 <div className='px-5 py-5'>
-                    <Button title={post.downBtn} styles={styles} />
+                    <Button title="More" styles={styles} />
                 </div>
-                <CardBtn styles="absolute px-3 top-3 left-3" title={post.buttonTitle} />
             </div>
         </>
     )
