@@ -5,7 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'DINWebPro': ['DINWebPro']
+      },
+      colors: {
+        'primary':'#c30a17'
+      }
+    },
   },
   plugins: [],
 }
